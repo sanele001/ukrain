@@ -1,5 +1,7 @@
 import React, { useState, useEffect, createContext, Children } from "react";
 
+const myKey = process.env.KEY;
+
 interface Rootdata {
   records: Record[];
   offset: string;
@@ -44,7 +46,7 @@ export const Infomation = (props: any) => {
       "https://api.airtable.com/v0/app3PsdwvJ624badu/war?maxRecords=3&view=Grid%20view",
       {
         headers: {
-          Authorization: "Bearer keydANeIcMSXo1If5",
+          Authorization: "Bearer " + myKey,
         },
       }
     );

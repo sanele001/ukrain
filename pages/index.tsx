@@ -10,6 +10,8 @@ import Row from "react-bootstrap/Row";
 import Personel from "./components/personel";
 import { Infomation } from "./components/context";
 
+const myKey = process.env.KEY;
+
 interface RootData {
   id: string;
   createdTime: Date;
@@ -77,7 +79,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "https://api.airtable.com/v0/app3PsdwvJ624badu/countrydata",
     {
       headers: {
-        Authorization: "Bearer keydANeIcMSXo1If5",
+        Authorization: "Barear " + myKey,
       },
     }
   );
